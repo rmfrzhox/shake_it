@@ -9,15 +9,15 @@ public class ScreenSystem : MonoBehaviour {
     public GameObject[] itemButton;
     public GameObject[] moveButton;
 
-    public ScreenData screendata;
+    public DataScreem screendata;
 
-    ScreenInfo currChapter;
+    ScreenInfo currChapter = null;
 
     void Awake()
     {
         if (!screendata)
         {
-            screendata = Resources.Load("ScreenData") as ScreenData;
+            screendata = Resources.Load("ScreenData") as DataScreem;
         }
 
         // 챕터 연결 정보 설정
@@ -66,7 +66,9 @@ public class ScreenSystem : MonoBehaviour {
         screendata.chapterInfo[8].dirInfo[(int)Dir.North] = screendata.chapterInfo[7];
         screendata.chapterInfo[8].dirInfo[(int)Dir.South] = null;
 
-        currChapter = screendata.chapterInfo[0];
+
+
+        currChapter = screendata.chapterInfo[0];    
     }
 
     void Start()
@@ -96,13 +98,13 @@ public class ScreenSystem : MonoBehaviour {
         for (int i = 0; i < 9; i++)
         {
             // 아이템 스프라이트 입력
-            itemButton[i].GetComponent<Image>().sprite = GameDataManager.Instance.database.itemProperty[itemIndex + i].imageItem;
+            itemButton[i].GetComponent<Image>().sprite = GameDataManager.Instance.itemData.itemProperty[itemIndex + i].imageItem;
             
             // 아이템 위치 입력
             itemButton[i].GetComponent<RectTransform>().localPosition = currScreen.v_ItemLocation[i];
             
             // 구입여부에 따른 활성화
-            if (GameDataManager.Instance.database.itemProperty[itemIndex + i].isBuy)
+            if (GameDataManager.Instance.itemData.itemProperty[itemIndex + i].isBuy)
                 itemButton[i].SetActive(true);
             else
                 itemButton[i].SetActive(false);
@@ -126,16 +128,19 @@ public class ScreenSystem : MonoBehaviour {
     public void MoveSouth()
     {
         currChapter = currChapter.dirInfo[(int)Dir.South];
+
         SetScreen(currChapter);
     }
     public void MoveEast()
     {
         currChapter = currChapter.dirInfo[(int)Dir.East];
+
         SetScreen(currChapter);
     }
     public void MoveWest()
     {
         currChapter = currChapter.dirInfo[(int)Dir.West];
+
         SetScreen(currChapter);
     }
 

@@ -26,7 +26,6 @@ public class cSplashObject : MonoBehaviour {
 	// Use this for initialization
 	void Awake () {
         m_fDrag = gameObject.GetComponent<Rigidbody>().drag;
-        InitializeMoneyPerHit(0);
 	}
 	
 	// Update is called once per frame
@@ -103,15 +102,10 @@ public class cSplashObject : MonoBehaviour {
      
 
         // 계산된 돈 전달...
-        GameDataManager.Instance.CoinSave(sum);
+
 
 
     }
-
-   public void InitializeMoneyPerHit(int _val)
-   {
-       m_iMoneyPerHit = _val;
-   }
 
 
     // 변경된 유저의 데이터 업데이트

@@ -181,19 +181,11 @@ public class cInGameData : MonoBehaviour {
 
     public void CreateSplashObject(int _para)
     {
-        if (_para == 4)
-            for (int i = 0; i < 3; ++i)
-            {
-                GameObject obj = (GameObject)Instantiate(m_prfSplashObject[_para], m_objRespawnPos.transform.position, Quaternion.identity);
-                cSplashObject ball = obj.GetComponent<cSplashObject>();
-                ball.InitializeMoneyPerHit(GameDataManager.Instance.CoinPerHit(4));
-            }
+        if(_para == 4)
+            for(int i=0; i<3; ++i)
+                Instantiate(m_prfSplashObject[_para], m_objRespawnPos.transform.position, Quaternion.identity);
         else
-        {
-            GameObject obj = (GameObject)Instantiate(m_prfSplashObject[_para], m_objRespawnPos.transform.position, Quaternion.identity);
-            cSplashObject ball = obj.GetComponent<cSplashObject>();
-            ball.InitializeMoneyPerHit(GameDataManager.Instance.CoinPerHit(_para));
-        }
+            Instantiate(m_prfSplashObject[_para], m_objRespawnPos.transform.position, Quaternion.identity);
     }
 
 

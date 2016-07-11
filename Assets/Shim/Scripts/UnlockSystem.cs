@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class UnlockSystem : MonoBehaviour {
     Sprite unlockSprite;
-    Database database;
+    DataItem itemData;
 
     GameObject[] itemObj;
     GameObject[] stageObj;
@@ -16,7 +16,7 @@ public class UnlockSystem : MonoBehaviour {
         itemObj = GameDataManager.Instance.itemObj;
         stageObj = GameDataManager.Instance.stageObj;
         chapObj = GameDataManager.Instance.chapObj;
-        database = GameDataManager.Instance.database;
+        itemData = GameDataManager.Instance.itemData;
         unlockSprite = GameDataManager.Instance.unlockSprite;
     }
 	
@@ -32,9 +32,9 @@ public class UnlockSystem : MonoBehaviour {
         int checkItme = stageIndex;
 
         // 아이템 구입이 완료 되었는지 확인
-        if (database.itemProperty[checkItme].isBuy == false) return;
-        if (database.itemProperty[checkItme + 1].isBuy == false) return;
-        if (database.itemProperty[checkItme + 2].isBuy == false) return;
+        if (itemData.itemProperty[checkItme].isBuy == false) return;
+        if (itemData.itemProperty[checkItme + 1].isBuy == false) return;
+        if (itemData.itemProperty[checkItme + 2].isBuy == false) return;
 
         UnlockStage(stageIndex);
     }
@@ -69,22 +69,22 @@ public class UnlockSystem : MonoBehaviour {
     // 락 해제
     void UnlockItem(int itemIndex )
     {
-        database.itemProperty[itemIndex].isLock = false;
+        itemData.itemProperty[itemIndex].isLock = false;
         itemObj[itemIndex].GetComponent<Image>().sprite = unlockSprite;
         itemObj[itemIndex].transform.FindChild("Item_Image").GetComponent<Image>().enabled = true;
-        itemObj[itemIndex].transform.FindChild("Item_Image").GetComponent<Image>().sprite = database.itemProperty[itemIndex].imageItem;
+        itemObj[itemIndex].transform.FindChild("Item_Image").GetComponent<Image>().sprite = itemData.itemProperty[itemIndex].imageItem;
     }
     void UnlockStage(int stageIndex)
     {
-        database.stageProperty[stageIndex].isLock = false;
+        itemData.stageProperty[stageIndex].isLock = false;
         stageObj[stageIndex].GetComponent<Image>().sprite = unlockSprite;
         stageObj[stageIndex].transform.FindChild("Text").GetComponent<Text>().enabled = true;
-        stageObj[stageIndex].transform.FindChild("Text").GetComponent<Text>().text = database.stageProperty[stageIndex].strName;
+        stageObj[stageIndex].transform.FindChild("Text").GetComponent<Text>().text = itemData.stageProperty[stageIndex].strName;
     }
     void UnlockChapter(int chapIndex)
     {
-        database.chapProperty[chapIndex].isLock = false;
-        chapObj[chapIndex].transform.FindChild("Chapter_Btn").transform.FindChild("Chapter_Text").GetComponent<Text>().text = database.chapProperty[chapIndex].strName;
+        itemData.chapProperty[chapIndex].isLock = false;
+        chapObj[chapIndex].transform.FindChild("Chapter_Btn").transform.FindChild("Chapter_Text").GetComponent<Text>().text = itemData.chapProperty[chapIndex].strName;
         chapObj[chapIndex].transform.FindChild("Chapter_Btn").GetComponent<Image>().sprite = unlockSprite;
     }
 

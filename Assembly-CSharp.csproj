@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{1880D439-7B9B-8900-01CB-D1F857A2FEE9}</ProjectGuid>
+    <ProjectGuid>{35B44342-075A-D63D-4BE0-4B08D64308EC}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -45,14 +45,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Park\InGame\script\Quit.cs" />
-     <Compile Include="Assets\Park\InGame\script\cBox.cs" />
-     <Compile Include="Assets\Park\InGame\script\cInGameData.cs" />
-     <Compile Include="Assets\Park\InGame\script\cParticleManager.cs" />
-     <Compile Include="Assets\Park\InGame\script\cSplashObject.cs" />
-     <Compile Include="Assets\Park\InGame\script\cUI.cs" />
-     <Compile Include="Assets\Park\InGame\script\realTimeCount.cs" />
-     <Compile Include="Assets\Park\InGame\script\realTimePos.cs" />
      <Compile Include="Assets\Shim\Scripts\DB_SC\Database.cs" />
      <Compile Include="Assets\Shim\Scripts\DB_SC\MakeScriptableObject.cs" />
      <Compile Include="Assets\Shim\Scripts\DB_SC\Player_Data.cs" />
@@ -62,7 +54,6 @@
      <Compile Include="Assets\Shim\Scripts\Property.cs" />
      <Compile Include="Assets\Shim\Scripts\Test_SC\ScreenSystem.cs" />
      <Compile Include="Assets\Shim\Scripts\UnlockSystem.cs" />
-     <None Include="Assets\Park\PowerUps Vol 1 Free\Readme.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
