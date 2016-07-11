@@ -5,6 +5,7 @@ using System.Collections;
 [CreateAssetMenu(fileName = "Database")]
 public class Database : ScriptableObject
 {
+int a;
     public ObjectProperty[] itemProperty = new ObjectProperty[81];
     public ObjectProperty[] stageProperty = new ObjectProperty[27];
     public ObjectProperty[] chapProperty = new ObjectProperty[9];
