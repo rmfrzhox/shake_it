@@ -104,7 +104,7 @@ public class ScreenSystem : MonoBehaviour {
             itemButton[i].GetComponent<RectTransform>().localPosition = currScreen.v_ItemLocation[i];
             
             // 구입여부에 따른 활성화
-            if (GameDataManager.Instance.itemData.itemProperty[itemIndex + i].isBuy)
+            if (GameDataManager.Instance.userData.itemIsBuy[itemIndex + i])
                 itemButton[i].SetActive(true);
             else
                 itemButton[i].SetActive(false);

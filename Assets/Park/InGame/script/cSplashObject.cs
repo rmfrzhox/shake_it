@@ -21,7 +21,7 @@ public class cSplashObject : MonoBehaviour {
     /// 단순 인터페이스 역할만
     /// </summary>
     // 돈/히트
-    private int m_iMoneyPerHit;
+    private int m_iMoneyPerHit = GameDataManager.Instance.userData.hitPoint[0];
 
 	// Use this for initialization
 	void Awake () {
@@ -97,12 +97,12 @@ public class cSplashObject : MonoBehaviour {
             sum = m_iMoneyPerHit + _other.gameObject.GetComponent<cSplashObject>().GetMoneyPerHit();
             sum /= 2;
         }
-        else if (_other.gameObject.tag == "face") // 벽이라면        
+        else// if (_other.gameObject.tag == "face") // 벽이라면        
             sum = m_iMoneyPerHit;
-     
+
 
         // 계산된 돈 전달...
-
+        GameDataManager.Instance.CoinSave(sum);
 
 
     }
