@@ -83,6 +83,7 @@
     <Compile Include="Assets\Shim\Scripts\DB_SC\DataPlayer.cs" />
     <Compile Include="Assets\Shim\Scripts\DB_SC\DataScreem.cs" />
     <Compile Include="Assets\Shim\Scripts\DB_SC\MakeScriptableObject.cs" />
+    <Compile Include="Assets\Shim\Scripts\DB_SC\SaveAndLoad.cs" />
     <Compile Include="Assets\Shim\Scripts\GM.cs" />
     <Compile Include="Assets\Shim\Scripts\GameDataManager.cs" />
     <Compile Include="Assets\Shim\Scripts\Test_SC\ScreenSystem.cs" />

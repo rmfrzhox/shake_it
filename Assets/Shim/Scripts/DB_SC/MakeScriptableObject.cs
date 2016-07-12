@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿/*
+using UnityEngine;
 using System.Collections;
 using UnityEditor;
 
@@ -24,3 +25,4 @@ public class MakeScriptableObject
         Selection.activeObject = chapterdata;
     }
 }
+*/

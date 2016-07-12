@@ -57,6 +57,7 @@ public class GameDataManager : MonoBehaviour {
     //  시스템
     UnlockSystem unlockSystem;
     ScreenSystem screenSystem;
+    SaveAndLoad saveAndLoad;
 
     // 싱글톤 구현
     public static GameDataManager _instance = null;
@@ -92,10 +93,16 @@ public class GameDataManager : MonoBehaviour {
             userData = Resources.Load("UserData") as DataPlayer;
         }
 
+        if (!saveAndLoad)
+        {
+            saveAndLoad = gameObject.GetComponent<SaveAndLoad>();
+        }
+
         if (!unlockSystem)
         {
             unlockSystem = gameObject.GetComponent < UnlockSystem >();
         }
+
         if (!screenSystem)
         {
             screenSystem = gameObject.GetComponent<ScreenSystem>();
@@ -106,21 +113,36 @@ public class GameDataManager : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
+        saveAndLoad.LoadDB();
         SetData();
     }
 
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetButtonUp("Jump"))
+        if (Input.GetButtonUp("Fire1"))
         {
             DataInit();
             SetData();
             print("데이터 초기화");
         }
-	
-	}
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            print("종료");
+            QuitApp();
+        }
 
+    }
+    void OnApplicationQuit()
+    {
+        print("종료");
+        QuitApp();
+    }
+    void QuitApp()
+    {
+        saveAndLoad.SaveDB();
+        Application.Quit();
+    }
     // 각 종 공 업그레이드
     public void BallUp(int index)
     {
@@ -369,6 +391,9 @@ public class GameDataManager : MonoBehaviour {
     // 데이터 초기화 
     void DataInit()
     {
+        userData.currentCoin = 600000;
+        userData.currentDia = 6000;
+
         // 아이템 초기화
         for (int i = 0; i < 81; i++)
         {
@@ -406,11 +431,6 @@ public class GameDataManager : MonoBehaviour {
     // 데이터 셋팅
     void SetData()
     {
-        // 플레이어 데이터 입력
-        //   iCurrentCoin = userData.currentCoin;
-        //  iCurrentDia = userData.currentDia;
-        //  boxSpeed = userData.boxSpeed;
-        //  hitPoint = userData.hitPoint;
 
 
         // 아이템 데이터 입력
@@ -444,6 +464,15 @@ public class GameDataManager : MonoBehaviour {
                 chapObj[i].transform.FindChild("Chapter_Btn").GetComponent<Image>().sprite = unlockSprite;
 
             }
+        }
+
+        for (int i = 0; i < chapObj.Length; i++)
+        {
+            if (itemData.chapProperty[i].isBuy == true)
+            {
+                screenSystem.WhenBuyChapter(i);
+            }
+            
         }
 
         // 챕터에서 스테이지 배열 만들기
