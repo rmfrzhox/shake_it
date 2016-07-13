@@ -86,11 +86,14 @@
     <Compile Include="Assets\Shim\Scripts\DB_SC\SaveAndLoad.cs" />
     <Compile Include="Assets\Shim\Scripts\GM.cs" />
     <Compile Include="Assets\Shim\Scripts\GameDataManager.cs" />
-    <Compile Include="Assets\Shim\Scripts\Test_SC\ScreenSystem.cs" />
+    <Compile Include="Assets\Shim\Scripts\ScreenSystem.cs" />
     <Compile Include="Assets\Shim\Scripts\UnlockSystem.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Park\PowerUps Vol 1 Free\Readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Assets\Shim\Scripts\Test_SC\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>

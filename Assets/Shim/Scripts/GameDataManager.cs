@@ -106,23 +106,27 @@ public class GameDataManager : MonoBehaviour {
         {
             screenSystem = gameObject.GetComponent<ScreenSystem>();
         }
-        saveAndLoad.LoadDB();
 
     }
 
     // Use this for initialization
     void Start()
     {
+        saveAndLoad.LoadDB();
+
         SetData();
     }
 
-	
+	public void Btn_Init()
+    {
+        DataInit();
+        SetData();
+    }
 	// Update is called once per frame
 	void Update () {
         if (Input.GetButtonUp("Fire1"))
         {
-            DataInit();
-            SetData();
+            Btn_Init();            
             print("데이터 초기화");
         }
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -472,6 +476,7 @@ public class GameDataManager : MonoBehaviour {
             }
         }
 
+        /*
         for (int i = 0; i < chapObj.Length; i++)
         {
             if (userData.chapIsBuy[i] == true)
@@ -480,7 +485,7 @@ public class GameDataManager : MonoBehaviour {
             }
             
         }
-
+        */
         // 챕터에서 스테이지 배열 만들기
         for (int i = 0; i < chapObj.Length; i++)
         {

@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SaveAndLoad : MonoBehaviour {
+public class SaveAndLoad : MonoBehaviour
+{
 
     string strItemBuy = "itemBuy";
     string strItemLock = "itemLock";
@@ -125,7 +126,7 @@ public class SaveAndLoad : MonoBehaviour {
             }
         }
 
-        
+
         // 스테이지 로드
         if (PlayerPrefs.GetString(strStageBuy) != "")
         {
@@ -156,13 +157,13 @@ public class SaveAndLoad : MonoBehaviour {
 
             for (int i = 0; i < GameDataManager.Instance.itemData.chapProperty.Length; i++)
             {
-                GameDataManager.Instance.userData.chapIsBuy[i] =System.Convert.ToBoolean(chapBuy[i]);
+                GameDataManager.Instance.userData.chapIsBuy[i] = System.Convert.ToBoolean(chapBuy[i]);
                 GameDataManager.Instance.userData.chapLock[i] = System.Convert.ToBoolean(chapLock[i]);
             }
         }
 
 
-        
+
         // 유저 정보 로드
         GameDataManager.Instance.userData.currentCoin = PlayerPrefs.GetInt(strCoin);
         GameDataManager.Instance.userData.currentDia = PlayerPrefs.GetInt(strDia);
@@ -170,19 +171,18 @@ public class SaveAndLoad : MonoBehaviour {
         print(PlayerPrefs.GetInt(strCoin));
         print(PlayerPrefs.GetInt(strDia));
 
-        
+
         if (PlayerPrefs.GetString(strHitPoint) != "")
         {
             string[] hitPoint;
 
-            hitPoint = PlayerPrefs.GetString(strHitPoint).Split(',');        
+            hitPoint = PlayerPrefs.GetString(strHitPoint).Split(',');
 
             for (int i = 0; i < GameDataManager.Instance.userData.hitPoint.Length; i++)
             {
                 GameDataManager.Instance.userData.hitPoint[i] = System.Convert.ToInt32(hitPoint[i]);
             }
         }
-
 
     }
 }

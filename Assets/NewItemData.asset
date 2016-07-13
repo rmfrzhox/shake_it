@@ -12,940 +12,729 @@ MonoBehaviour:
   m_Name: NewItemData
   m_EditorClassIdentifier: 
   itemProperty:
-  - strName: new item
-    strScenario: new Scenario
-    isBuy: 1
-    isLock: 0
-    isDiaLock: 0
-    priceCoin: 100
+  - strName: "\uCEE4\uD53C \uC6B0\uC720"
+    strScenario: "\uCE74\uD398\uC778\uC774 100mg \uB4EC\uBFCD \uB2F4\uC740 \uCEE4\uD53C\uC6B0\uC720\uB97C
+      \uB9C8\uC168\uB2E4. \uC7A0\uC774 \uC624\uC9C0 \uC54A\uB294\uB2E4."
+    isDiaLock: 1
+    priceCoin: 200
     priceDia: 100
     imageItem: {fileID: 21300000, guid: b706c8a30aaa65f4ebbebfa303e9834b, type: 3}
-  - strName: new item
-    strScenario: new Scenario
-    isBuy: 1
-    isLock: 0
-    isDiaLock: 0
-    priceCoin: 100
+  - strName: "\uBC15\uCE74\uC2A4"
+    strScenario: "\uD480\uB824\uB77C \uD53C\uB85C."
+    isDiaLock: 1
+    priceCoin: 200
     priceDia: 100
     imageItem: {fileID: 21300000, guid: 00c208aac78456e4f9abaf9cb30c8330, type: 3}
-  - strName: new item
-    strScenario: new Scenario
-    isBuy: 1
-    isLock: 0
-    isDiaLock: 0
-    priceCoin: 100
+  - strName: "\uD64D\uC0BC"
+    strScenario: "\uD798\uC774 \uB118\uCE58\uB294\uB370 \uD45C\uD604\uD560 \uBC29\uBC95\uC774
+      \uC5C6\uB2E4."
+    isDiaLock: 1
+    priceCoin: 200
     priceDia: 100
     imageItem: {fileID: 21300000, guid: 2052de61de62d1b4d8e8df2346941390, type: 3}
-  - strName: new item
-    strScenario: new Scenario
-    isBuy: 1
-    isLock: 0
-    isDiaLock: 0
-    priceCoin: 100
+  - strName: "\uC544\uB839"
+    strScenario: "\uC544\uB839 \uC880 \uB4E4\uC5C8\uB354\uB2C8 \uC5B4\uAE68\uAC00
+      \uBED0\uADFC\uD558\uB2E4"
+    isDiaLock: 1
+    priceCoin: 400
     priceDia: 100
     imageItem: {fileID: 21300000, guid: 4ac3f2002629b82488618280d5a70825, type: 3}
-  - strName: new item
-    strScenario: new Scenario
-    isBuy: 1
-    isLock: 0
-    isDiaLock: 0
-    priceCoin: 100
+  - strName: "\uB2ED\uAC00\uC2B4"
+    strScenario: "\uB2E4\uC774\uC5B4\uD130\uC758 \uC800\uB141\uC740 \uC5ED\uC2DC \uB2ED\uAC00\uC2B4\uC0B4\uC774\uB2E4."
+    isDiaLock: 1
+    priceCoin: 400
     priceDia: 100
     imageItem: {fileID: 21300000, guid: 1fab68535ee24a44e91ca93e35f4723e, type: 3}
-  - strName: new item
-    strScenario: new Scenario
-    isBuy: 1
-    isLock: 0
-    isDiaLock: 0
-    priceCoin: 100
+  - strName: Shake It!
+    strScenario: "\uC774 \uAC8C\uC784 \uB3C4\uB300\uCCB4 \uBB50\uC9C0? \uD314\uC774
+      \uC544\uD30C\uC628\uB2E4."
+    isDiaLock: 1
+    priceCoin: 400
     priceDia: 100
     imageItem: {fileID: 21300000, guid: 44429d8222dd91944b279e49c2cc11b8, type: 3}
-  - strName: new item
-    strScenario: new Scenario
-    isBuy: 1
-    isLock: 0
-    isDiaLock: 0
-    priceCoin: 100
+  - strName: "\uD2F0\uC154\uCE20"
+    strScenario: "\uC2AC\uB9BC\uD54F \uD2F0\uC154\uCE20\uB97C \uC0C0\uB2E4."
+    isDiaLock: 1
+    priceCoin: 600
     priceDia: 100
     imageItem: {fileID: 21300000, guid: b43ffab003cebd6468a1a5de8b7237a3, type: 3}
-  - strName: new item
-    strScenario: new Scenario
-    isBuy: 1
-    isLock: 0
-    isDiaLock: 0
-    priceCoin: 100
+  - strName: "\uBC14\uC9C0"
+    strScenario: "\uC2A4\uD0A4\uB2C8\uBC14\uC9C0\uB97C \uC785\uC744 \uC218 \uC788\uAC8C
+      \uB418\uC5C8\uB2E4. \uC790\uC2E0\uAC10\uC774 +10 \uC0C1\uC2B9\uD588\uB2E4."
+    isDiaLock: 1
+    priceCoin: 600
     priceDia: 100
     imageItem: {fileID: 21300000, guid: 1c0a1cef66bf5304489653ff5034cd34, type: 3}
-  - strName: new item
-    strScenario: new Scenario
-    isBuy: 1
-    isLock: 0
-    isDiaLock: 0
-    priceCoin: 100
+  - strName: "\uC804\uC2E0\uAC70\uC6B8"
+    strScenario: "\uD6D7. \uC0E4\uC6CC \uD6C4 \uAC70\uC6B8\uC5D0 \uBE44\uCE5C \uB0B4
+      \uBAA8\uC2B5\uC744 \uAC10\uC0C1\uD55C\uB2E4."
+    isDiaLock: 1
+    priceCoin: 600
     priceDia: 100
     imageItem: {fileID: 21300000, guid: 4857697b71833dc4b9177282ab545bf6, type: 3}
-  - strName: new item
-    strScenario: new Scenario
-    isBuy: 0
-    isLock: 0
+  - strName: "\uCEE4\uD2BC"
+    strScenario: "\uD56D\uC0C1 \uB2EB\uD600 \uC788\uB358 \uCEE4\uD2BC\uC744 \uB048\uC73C\uB85C
+      \uBB36\uC5C8\uB2E4. \uB530\uB73B\uD55C \uD587\uC0B4\uC774 \uB4E4\uC5B4\uC628\uB2E4."
     isDiaLock: 0
-    priceCoin: 100
-    priceDia: 100
+    priceCoin: 1000
+    priceDia: 50
     imageItem: {fileID: 0}
-  - strName: new item
-    strScenario: new Scenario
-    isBuy: 0
-    isLock: 0
+  - strName: "\uC6B4\uB3D9\uD654"
+    strScenario: "\uBC16\uC73C\uB85C \uB098\uAC00 \uCC9C\uCC9C\uD788 \uAC78\uC5C8\uB2E4.
+      \uC624\uB79C\uB9CC\uC5D0 \uAD11\uD569\uC131\uC744 \uD558\uB2C8 \uBAB8\uC5D0
+      \uACB0\uD54D\uB418\uC5B4 \uC788\uC5C8\uB358 \uBE44\uD0C0\uBBFCD\uAC00 \uCC28\uC624\uB974\uB294
+      \uAC83 \uAC19\uB2E4. "
     isDiaLock: 0
-    priceCoin: 100
-    priceDia: 100
+    priceCoin: 1000
+    priceDia: 50
     imageItem: {fileID: 0}
-  - strName: new item
-    strScenario: new Scenario
-    isBuy: 0
-    isLock: 0
+  - strName: "\uC2DC\uC9D1"
+    strScenario: "\uB098\uB294 \uC624\uB298 \uACAC\uB514\uAE30 \uD798\uB4E4\uC5B4
+      \uC678\uCD9C\uC744 \uD55C\uB2E4 \uB098 \uC5C6\uB294 \uC0AC\uC774 \uAD7F\uC744
+      \uD558\uB4E0\uC9C0 \uC794\uCE58\uB97C \uD558\uB4E0\uC9C0 \uC54C\uC544\uC11C\uB4E4
+      \uD558\uC2DC\uAE38  \uB098\uB294 \uC9C0\uAE08 \uC678\uCD9C \uC911 - \uBB38\uC601\uADDC "
     isDiaLock: 0
-    priceCoin: 100
-    priceDia: 100
+    priceCoin: 1000
+    priceDia: 50
     imageItem: {fileID: 0}
-  - strName: new item
-    strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
+  - strName: "\uC544\uC8FC \uD2B9\uBCC4\uD55C \uC5F0\uC560\uC218\uC5C5"
+    strScenario: "\uC5F0\uC560\uAC00 \uB204\uAD70\uAC00\uC5D0\uAC8C\uB294 \uC790\uC5F0\uC2A4\uB7FD\uACE0
+      \uC26C\uC6B4 \uC77C\uC774\uC9C0\uB9CC \uADF8\uB807\uC9C0 \uC54A\uC740 \uB098
+      \uAC19\uC740 \uC0AC\uB78C\uB4E4\uB3C4 \uC788\uB2E4. \uADF8\uB7F0 \uC0AC\uB78C\uC5D0\uAC8C
+      \uB3C4\uC6C0\uC774 \uB418\uB294 \uCC45\uC778 \uAC83 \uAC19\uB2E4."
     isDiaLock: 0
-    priceCoin: 100
-    priceDia: 100
+    priceCoin: 1500
+    priceDia: 70
     imageItem: {fileID: 0}
-  - strName: new item
-    strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
+  - strName: "\uC5C4\uB9C8, \uB098 \uACB0\uD63C\uD574\uB3C4 \uAD1C\uCC2E\uC744\uAE4C"
+    strScenario: "\uB0A8\uB4E4\uCC98\uB7FC \uAF2D \uACB0\uD63C\uD574\uC57C \uD558\uB098?
+      \uACB0\uD63C, \uD558\uC790\uB2C8 \uB450\uB835\uACE0, \uC548\uD558\uC790\uB2C8
+      \uBD88\uC548\uD558\uACE0 \uADF8\uB798\uB3C4 \uD558\uACE0 \uC2F6\uB2E4 \uACB0\uD63C "
     isDiaLock: 0
-    priceCoin: 100
-    priceDia: 100
+    priceCoin: 1500
+    priceDia: 70
     imageItem: {fileID: 0}
-  - strName: new item
-    strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
+  - strName: "\uC544\uC774\uC640 \uD568\uAED8 \uC790\uB77C\uB294 \uBD80\uBAA8"
+    strScenario: "\uB0B4\uBAB8\uB6B1\uC544\uB9AC \uD558\uB098 \uAC74\uC0AC\uD558\uAE30
+      \uD798\uB4E0 \uC138\uC0C1\uC774\uC9C0\uB9CC \uB098\uB3C4 \uC88B\uC740 \uBD80\uBAA8\uAC00
+      \uB418\uACE0 \uC2F6\uB2E4."
     isDiaLock: 0
-    priceCoin: 100
-    priceDia: 100
+    priceCoin: 1500
+    priceDia: 70
     imageItem: {fileID: 0}
-  - strName: new item
-    strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
+  - strName: "\uBCF5\uAD8C"
+    strScenario: "\uBD80\uC790\uAC00 \uB418\uB294 \uD589\uBCF5\uD55C \uC0C1\uC0C1\uC73C\uB85C
+      \uC77C\uC8FC\uC77C\uC744 \uBC84\uD2F4\uB2E4."
     isDiaLock: 0
-    priceCoin: 100
-    priceDia: 100
+    priceCoin: 2000
+    priceDia: 90
     imageItem: {fileID: 0}
-  - strName: new item
-    strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
+  - strName: "\uC8FC\uD0DD\uCCAD\uC57D\uD1B5\uC7A5"
+    strScenario: "\uB0B4\uC9D1\uB9C8\uB828\uC744 \uAFC8\uAFD4\uBCF8\uB2E4."
     isDiaLock: 0
-    priceCoin: 100
-    priceDia: 100
+    priceCoin: 2000
+    priceDia: 90
     imageItem: {fileID: 0}
-  - strName: new item
-    strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
+  - strName: "\uAC00\uACC4\uBD80"
+    strScenario: "\uB3C8\uC744 \uBAA8\uC73C\uB294 \uCCAB\uAC78\uC74C, \uAC00\uACC4\uBD80
+      \uC4F0\uAE30!"
     isDiaLock: 0
-    priceCoin: 100
-    priceDia: 100
+    priceCoin: 2000
+    priceDia: 90
     imageItem: {fileID: 0}
   - strName: new item
     strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
     isDiaLock: 0
     priceCoin: 100
     priceDia: 100
     imageItem: {fileID: 0}
   - strName: new item
     strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
     isDiaLock: 0
     priceCoin: 100
     priceDia: 100
     imageItem: {fileID: 0}
   - strName: new item
     strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
     isDiaLock: 0
     priceCoin: 100
     priceDia: 100
     imageItem: {fileID: 0}
   - strName: new item
     strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
     isDiaLock: 0
     priceCoin: 100
     priceDia: 100
     imageItem: {fileID: 0}
   - strName: new item
     strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
     isDiaLock: 0
     priceCoin: 100
     priceDia: 100
     imageItem: {fileID: 0}
   - strName: new item
     strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
     isDiaLock: 0
     priceCoin: 100
     priceDia: 100
     imageItem: {fileID: 0}
   - strName: new item
     strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
     isDiaLock: 0
     priceCoin: 100
     priceDia: 100
     imageItem: {fileID: 0}
   - strName: new item
     strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
     isDiaLock: 0
     priceCoin: 100
     priceDia: 100
     imageItem: {fileID: 0}
   - strName: new item
     strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
     isDiaLock: 0
     priceCoin: 100
     priceDia: 100
     imageItem: {fileID: 0}
   - strName: new item
     strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
     isDiaLock: 0
     priceCoin: 100
     priceDia: 100
     imageItem: {fileID: 0}
   - strName: new item
     strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
     isDiaLock: 0
     priceCoin: 100
     priceDia: 100
     imageItem: {fileID: 0}
   - strName: new item
     strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
     isDiaLock: 0
     priceCoin: 100
     priceDia: 100
     imageItem: {fileID: 0}
   - strName: new item
     strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
     isDiaLock: 0
     priceCoin: 100
     priceDia: 100
     imageItem: {fileID: 0}
   - strName: new item
     strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
     isDiaLock: 0
     priceCoin: 100
     priceDia: 100
     imageItem: {fileID: 0}
   - strName: new item
     strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
     isDiaLock: 0
     priceCoin: 100
     priceDia: 100
     imageItem: {fileID: 0}
   - strName: new item
     strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
     isDiaLock: 0
     priceCoin: 100
     priceDia: 100
     imageItem: {fileID: 0}
   - strName: new item
     strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
     isDiaLock: 0
     priceCoin: 100
     priceDia: 100
     imageItem: {fileID: 0}
   - strName: new item
     strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
     isDiaLock: 0
     priceCoin: 100
     priceDia: 100
     imageItem: {fileID: 0}
   - strName: new item
     strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
     isDiaLock: 0
     priceCoin: 100
     priceDia: 100
     imageItem: {fileID: 0}
   - strName: new item
     strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
     isDiaLock: 0
     priceCoin: 100
     priceDia: 100
     imageItem: {fileID: 0}
   - strName: new item
     strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
     isDiaLock: 0
     priceCoin: 100
     priceDia: 100
     imageItem: {fileID: 0}
   - strName: new item
     strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
     isDiaLock: 0
     priceCoin: 100
     priceDia: 100
     imageItem: {fileID: 0}
   - strName: new item
     strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
     isDiaLock: 0
     priceCoin: 100
     priceDia: 100
     imageItem: {fileID: 0}
   - strName: new item
     strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
     isDiaLock: 0
     priceCoin: 100
     priceDia: 100
     imageItem: {fileID: 0}
   - strName: new item
     strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
     isDiaLock: 0
     priceCoin: 100
     priceDia: 100
     imageItem: {fileID: 0}
   - strName: new item
     strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
     isDiaLock: 0
     priceCoin: 100
     priceDia: 100
     imageItem: {fileID: 0}
   - strName: new item
     strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
     isDiaLock: 0
     priceCoin: 100
     priceDia: 100
     imageItem: {fileID: 0}
   - strName: new item
     strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
     isDiaLock: 0
     priceCoin: 100
     priceDia: 100
     imageItem: {fileID: 0}
   - strName: new item
     strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
     isDiaLock: 0
     priceCoin: 100
     priceDia: 100
     imageItem: {fileID: 0}
   - strName: new item
     strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
     isDiaLock: 0
     priceCoin: 100
     priceDia: 100
     imageItem: {fileID: 0}
   - strName: new item
     strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
     isDiaLock: 0
     priceCoin: 100
     priceDia: 100
     imageItem: {fileID: 0}
   - strName: new item
     strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
     isDiaLock: 0
     priceCoin: 100
     priceDia: 100
     imageItem: {fileID: 0}
   - strName: new item
     strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
     isDiaLock: 0
     priceCoin: 100
     priceDia: 100
     imageItem: {fileID: 0}
   - strName: new item
     strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
     isDiaLock: 0
     priceCoin: 100
     priceDia: 100
     imageItem: {fileID: 0}
   - strName: new item
     strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
     isDiaLock: 0
     priceCoin: 100
     priceDia: 100
     imageItem: {fileID: 0}
   - strName: new item
     strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
     isDiaLock: 0
     priceCoin: 100
     priceDia: 100
     imageItem: {fileID: 0}
   - strName: new item
     strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
     isDiaLock: 0
     priceCoin: 100
     priceDia: 100
     imageItem: {fileID: 0}
   - strName: new item
     strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
     isDiaLock: 0
     priceCoin: 100
     priceDia: 100
     imageItem: {fileID: 0}
   - strName: new item
     strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
     isDiaLock: 0
     priceCoin: 100
     priceDia: 100
     imageItem: {fileID: 0}
   - strName: new item
     strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
     isDiaLock: 0
     priceCoin: 100
     priceDia: 100
     imageItem: {fileID: 0}
   - strName: new item
     strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
     isDiaLock: 0
     priceCoin: 100
     priceDia: 100
     imageItem: {fileID: 0}
   - strName: new item
     strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
     isDiaLock: 0
     priceCoin: 100
     priceDia: 100
     imageItem: {fileID: 0}
   - strName: new item
     strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
     isDiaLock: 0
     priceCoin: 100
     priceDia: 100
     imageItem: {fileID: 0}
   - strName: new item
     strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
     isDiaLock: 0
     priceCoin: 100
     priceDia: 100
     imageItem: {fileID: 0}
   - strName: new item
     strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
     isDiaLock: 0
     priceCoin: 100
     priceDia: 100
     imageItem: {fileID: 0}
   - strName: new item
     strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
     isDiaLock: 0
     priceCoin: 100
     priceDia: 100
     imageItem: {fileID: 0}
   - strName: new item
     strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
     isDiaLock: 0
     priceCoin: 100
     priceDia: 100
     imageItem: {fileID: 0}
   - strName: new item
     strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
     isDiaLock: 0
     priceCoin: 100
     priceDia: 100
     imageItem: {fileID: 0}
   - strName: new item
     strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
     isDiaLock: 0
     priceCoin: 100
     priceDia: 100
     imageItem: {fileID: 0}
   - strName: new item
     strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
     isDiaLock: 0
     priceCoin: 100
     priceDia: 100
     imageItem: {fileID: 0}
   - strName: new item
     strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
     isDiaLock: 0
     priceCoin: 100
     priceDia: 100
     imageItem: {fileID: 0}
   - strName: new item
     strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
     isDiaLock: 0
     priceCoin: 100
     priceDia: 100
     imageItem: {fileID: 0}
   - strName: new item
     strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
     isDiaLock: 0
     priceCoin: 100
     priceDia: 100
     imageItem: {fileID: 0}
   - strName: new item
     strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
     isDiaLock: 0
     priceCoin: 100
     priceDia: 100
     imageItem: {fileID: 0}
   - strName: new item
     strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
     isDiaLock: 0
     priceCoin: 100
     priceDia: 100
     imageItem: {fileID: 0}
   - strName: new item
     strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
     isDiaLock: 0
     priceCoin: 100
     priceDia: 100
     imageItem: {fileID: 0}
   - strName: new item
     strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
     isDiaLock: 0
     priceCoin: 100
     priceDia: 100
     imageItem: {fileID: 0}
   - strName: new item
     strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
     isDiaLock: 0
     priceCoin: 100
     priceDia: 100
     imageItem: {fileID: 0}
   - strName: new item
     strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
     isDiaLock: 0
     priceCoin: 100
     priceDia: 100
     imageItem: {fileID: 0}
   - strName: new item
     strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
     isDiaLock: 0
     priceCoin: 100
     priceDia: 100
     imageItem: {fileID: 0}
   - strName: new item
     strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
     isDiaLock: 0
     priceCoin: 100
     priceDia: 100
     imageItem: {fileID: 0}
   - strName: new item
     strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
     isDiaLock: 0
     priceCoin: 100
     priceDia: 100
     imageItem: {fileID: 0}
   - strName: new item
     strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
     isDiaLock: 0
     priceCoin: 100
     priceDia: 100
     imageItem: {fileID: 0}
   stageProperty:
-  - strName: new item
+  - strName: "\uD65C\uAE30"
     strScenario: new Scenario
-    isBuy: 1
-    isLock: 0
-    isDiaLock: 0
-    priceCoin: 100
+    isDiaLock: 1
+    priceCoin: 250
     priceDia: 100
     imageItem: {fileID: 0}
-  - strName: new item
+  - strName: "\uD314\uADFC\uC721"
     strScenario: new Scenario
-    isBuy: 1
-    isLock: 0
-    isDiaLock: 0
-    priceCoin: 100
+    isDiaLock: 1
+    priceCoin: 250
     priceDia: 100
     imageItem: {fileID: 0}
-  - strName: new item
+  - strName: "\uB098\uC774\uC2A4\uBC14\uB514"
     strScenario: new Scenario
-    isBuy: 1
-    isLock: 0
-    isDiaLock: 0
-    priceCoin: 100
+    isDiaLock: 1
+    priceCoin: 250
     priceDia: 100
     imageItem: {fileID: 0}
-  - strName: new item
+  - strName: "\uC774\uBD88 \uBC16\uC73C\uB85C \uB098\uAC00\uC790"
     strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
     isDiaLock: 0
-    priceCoin: 100
+    priceCoin: 1200
+    priceDia: 60
+    imageItem: {fileID: 0}
+  - strName: "\uD589\uBCF5\uD558\uC790"
+    strScenario: new Scenario
+    isDiaLock: 0
+    priceCoin: 1700
+    priceDia: 80
+    imageItem: {fileID: 0}
+  - strName: "\uBD80\uC790\uAC00 \uB418\uC790"
+    strScenario: new Scenario
+    isDiaLock: 0
+    priceCoin: 2200
     priceDia: 100
     imageItem: {fileID: 0}
-  - strName: new item
+  - strName: "\uC678\uAD6D\uC5B4 \uB2A5\uB825"
     strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
     isDiaLock: 0
-    priceCoin: 100
+    priceCoin: 4000
+    priceDia: 170
+    imageItem: {fileID: 0}
+  - strName: "\uCEF4\uD4E8\uD130 \uB2A5\uB825"
+    strScenario: new Scenario
+    isDiaLock: 0
+    priceCoin: 6000
+    priceDia: 220
+    imageItem: {fileID: 0}
+  - strName: "\uB300\uD559 \uC878\uC5C5"
+    strScenario: new Scenario
+    isDiaLock: 0
+    priceCoin: 8000
+    priceDia: 270
+    imageItem: {fileID: 0}
+  - strName: "\uC6D4\uC138"
+    strScenario: new Scenario
+    isDiaLock: 0
+    priceCoin: 7000
+    priceDia: 270
+    imageItem: {fileID: 0}
+  - strName: "\uC804\uC138"
+    strScenario: new Scenario
+    isDiaLock: 0
+    priceCoin: 9000
+    priceDia: 320
+    imageItem: {fileID: 0}
+  - strName: "\uB0B4\uC9D1"
+    strScenario: new Scenario
+    isDiaLock: 0
+    priceCoin: 11000
+    priceDia: 370
+    imageItem: {fileID: 0}
+  - strName: "\uC9C1\uC7A5\uB3D9\uB8CC"
+    strScenario: new Scenario
+    isDiaLock: 0
+    priceCoin: 18000
+    priceDia: 450
+    imageItem: {fileID: 0}
+  - strName: "\uCE5C\uAD6C"
+    strScenario: new Scenario
+    isDiaLock: 0
+    priceCoin: 23000
+    priceDia: 550
+    imageItem: {fileID: 0}
+  - strName: "\uC5EC\uC790\uC0AC\uB78C"
+    strScenario: new Scenario
+    isDiaLock: 0
+    priceCoin: 28000
+    priceDia: 650
+    imageItem: {fileID: 0}
+  - strName: "\uC5F0\uC560"
+    strScenario: new Scenario
+    isDiaLock: 0
+    priceCoin: 35000
+    priceDia: 950
+    imageItem: {fileID: 0}
+  - strName: "\uACB0\uD63C"
+    strScenario: new Scenario
+    isDiaLock: 0
+    priceCoin: 45000
+    priceDia: 1250
+    imageItem: {fileID: 0}
+  - strName: "\uC721\uC544"
+    strScenario: new Scenario
+    isDiaLock: 0
+    priceCoin: 55000
+    priceDia: 1550
+    imageItem: {fileID: 0}
+  - strName: "\uC378"
+    strScenario: new Scenario
+    isDiaLock: 0
+    priceCoin: 65000
+    priceDia: 1800
+    imageItem: {fileID: 0}
+  - strName: "\uACE0\uBC31"
+    strScenario: new Scenario
+    isDiaLock: 0
+    priceCoin: 75000
+    priceDia: 2200
+    imageItem: {fileID: 0}
+  - strName: "\uB370\uC774\uD2B8"
+    strScenario: new Scenario
+    isDiaLock: 0
+    priceCoin: 85000
+    priceDia: 260
+    imageItem: {fileID: 0}
+  - strName: "\uCCAD\uD63C"
+    strScenario: new Scenario
+    isDiaLock: 0
+    priceCoin: 1300000
+    priceDia: 4000
+    imageItem: {fileID: 0}
+  - strName: "\uACB0\uD63C"
+    strScenario: new Scenario
+    isDiaLock: 0
+    priceCoin: 1900000
+    priceDia: 6000
+    imageItem: {fileID: 0}
+  - strName: "\uC2E0\uD63C"
+    strScenario: new Scenario
+    isDiaLock: 0
+    priceCoin: 2400000
+    priceDia: 8000
+    imageItem: {fileID: 0}
+  - strName: "\uC784\uC2E0"
+    strScenario: new Scenario
+    isDiaLock: 1
+    priceCoin: 3500000
     priceDia: 100
     imageItem: {fileID: 0}
-  - strName: new item
+  - strName: "\uCD9C\uC0B0"
     strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
-    isDiaLock: 0
-    priceCoin: 100
+    isDiaLock: 1
+    priceCoin: 4500000
     priceDia: 100
     imageItem: {fileID: 0}
-  - strName: new item
+  - strName: "\uADF8\uB9AC\uACE0 \uB458\uC9F8"
     strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
-    isDiaLock: 0
-    priceCoin: 100
-    priceDia: 100
-    imageItem: {fileID: 0}
-  - strName: new item
-    strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
-    isDiaLock: 0
-    priceCoin: 100
-    priceDia: 100
-    imageItem: {fileID: 0}
-  - strName: new item
-    strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
-    isDiaLock: 0
-    priceCoin: 100
-    priceDia: 100
-    imageItem: {fileID: 0}
-  - strName: new item
-    strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
-    isDiaLock: 0
-    priceCoin: 100
-    priceDia: 100
-    imageItem: {fileID: 0}
-  - strName: new item
-    strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
-    isDiaLock: 0
-    priceCoin: 100
-    priceDia: 100
-    imageItem: {fileID: 0}
-  - strName: new item
-    strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
-    isDiaLock: 0
-    priceCoin: 100
-    priceDia: 100
-    imageItem: {fileID: 0}
-  - strName: new item
-    strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
-    isDiaLock: 0
-    priceCoin: 100
-    priceDia: 100
-    imageItem: {fileID: 0}
-  - strName: new item
-    strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
-    isDiaLock: 0
-    priceCoin: 100
-    priceDia: 100
-    imageItem: {fileID: 0}
-  - strName: new item
-    strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
-    isDiaLock: 0
-    priceCoin: 100
-    priceDia: 100
-    imageItem: {fileID: 0}
-  - strName: new item
-    strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
-    isDiaLock: 0
-    priceCoin: 100
-    priceDia: 100
-    imageItem: {fileID: 0}
-  - strName: new item
-    strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
-    isDiaLock: 0
-    priceCoin: 100
-    priceDia: 100
-    imageItem: {fileID: 0}
-  - strName: new item
-    strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
-    isDiaLock: 0
-    priceCoin: 100
-    priceDia: 100
-    imageItem: {fileID: 0}
-  - strName: new item
-    strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
-    isDiaLock: 0
-    priceCoin: 100
-    priceDia: 100
-    imageItem: {fileID: 0}
-  - strName: new item
-    strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
-    isDiaLock: 0
-    priceCoin: 100
-    priceDia: 100
-    imageItem: {fileID: 0}
-  - strName: new item
-    strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
-    isDiaLock: 0
-    priceCoin: 100
-    priceDia: 100
-    imageItem: {fileID: 0}
-  - strName: new item
-    strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
-    isDiaLock: 0
-    priceCoin: 100
-    priceDia: 100
-    imageItem: {fileID: 0}
-  - strName: new item
-    strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
-    isDiaLock: 0
-    priceCoin: 100
-    priceDia: 100
-    imageItem: {fileID: 0}
-  - strName: new item
-    strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
-    isDiaLock: 0
-    priceCoin: 100
-    priceDia: 100
-    imageItem: {fileID: 0}
-  - strName: new item
-    strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
-    isDiaLock: 0
-    priceCoin: 100
-    priceDia: 100
-    imageItem: {fileID: 0}
-  - strName: new item
-    strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
-    isDiaLock: 0
-    priceCoin: 100
-    priceDia: 100
-    imageItem: {fileID: 0}
-  - strName: new item
-    strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
-    isDiaLock: 0
-    priceCoin: 100
+    isDiaLock: 1
+    priceCoin: 5500000
     priceDia: 100
     imageItem: {fileID: 0}
   chapProperty:
-  - strName: new item
+  - strName: "\uAC74 \uAC15"
+    strScenario: "\uC624\uD1A0\uACF5 3\uAC1C \uCD94\uAC00  \uC624\uD1A0\uACF5Max :
+      0\u21923"
+    isDiaLock: 0
+    priceCoin: 750
+    priceDia: 50
+    imageItem: {fileID: 0}
+  - strName: "\uAFC8"
     strScenario: new Scenario
-    isBuy: 1
-    isLock: 0
+    isDiaLock: 0
+    priceCoin: 100
+    priceDia: 100
+    imageItem: {fileID: 0}
+  - strName: "\uD559 \uC5C5"
+    strScenario: new Scenario
+    isDiaLock: 0
+    priceCoin: 100
+    priceDia: 100
+    imageItem: {fileID: 0}
+  - strName: "\uC9D1"
+    strScenario: new Scenario
+    isDiaLock: 0
+    priceCoin: 100
+    priceDia: 100
+    imageItem: {fileID: 0}
+  - strName: "\uC778\uAC04\uAD00\uACC4"
+    strScenario: new Scenario
+    isDiaLock: 0
+    priceCoin: 100
+    priceDia: 100
+    imageItem: {fileID: 0}
+  - strName: "\uD76C\uB9DD"
+    strScenario: new Scenario
+    isDiaLock: 0
+    priceCoin: 100
+    priceDia: 100
+    imageItem: {fileID: 0}
+  - strName: "\uC5F0 \uC560"
+    strScenario: new Scenario
+    isDiaLock: 0
+    priceCoin: 100
+    priceDia: 100
+    imageItem: {fileID: 0}
+  - strName: "\uACB0 \uD63C"
+    strScenario: new Scenario
     isDiaLock: 0
     priceCoin: 100
     priceDia: 100
     imageItem: {fileID: 0}
   - strName: new item
-    strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
-    isDiaLock: 0
-    priceCoin: 100
-    priceDia: 100
-    imageItem: {fileID: 0}
-  - strName: new item
-    strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
-    isDiaLock: 0
-    priceCoin: 100
-    priceDia: 100
-    imageItem: {fileID: 0}
-  - strName: new item
-    strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
-    isDiaLock: 0
-    priceCoin: 100
-    priceDia: 100
-    imageItem: {fileID: 0}
-  - strName: new item
-    strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
-    isDiaLock: 0
-    priceCoin: 100
-    priceDia: 100
-    imageItem: {fileID: 0}
-  - strName: new item
-    strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
-    isDiaLock: 0
-    priceCoin: 100
-    priceDia: 100
-    imageItem: {fileID: 0}
-  - strName: new item
-    strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
-    isDiaLock: 0
-    priceCoin: 100
-    priceDia: 100
-    imageItem: {fileID: 0}
-  - strName: new item
-    strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
-    isDiaLock: 0
-    priceCoin: 100
-    priceDia: 100
-    imageItem: {fileID: 0}
-  - strName: new item
-    strScenario: new Scenario
-    isBuy: 0
-    isLock: 1
+    strScenario: "\uC721 "
     isDiaLock: 0
     priceCoin: 100
     priceDia: 100

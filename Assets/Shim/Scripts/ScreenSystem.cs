@@ -66,7 +66,13 @@ public class ScreenSystem : MonoBehaviour {
         screendata.chapterInfo[8].dirInfo[(int)Dir.North] = screendata.chapterInfo[7];
         screendata.chapterInfo[8].dirInfo[(int)Dir.South] = null;
 
-
+        for(int i = 0; i < 9; i++)
+        {
+            screendata.chapterInfo[i].dir[0] = false;
+            screendata.chapterInfo[i].dir[1] = false;
+            screendata.chapterInfo[i].dir[2] = false;
+            screendata.chapterInfo[i].dir[3] = false;
+        }
 
         currChapter = screendata.chapterInfo[0];    
     }
@@ -74,8 +80,17 @@ public class ScreenSystem : MonoBehaviour {
     void Start()
     {
 
-       // OpenGate((int)Dir.South, screendata.chapterInfo[0], screendata.chapterInfo[1]);
+        // OpenGate((int)Dir.South, screendata.chapterInfo[0], screendata.chapterInfo[1]);
+        for (int i = 0; i < 9; i++)
+        {
+            if (GameDataManager.Instance.userData.chapIsBuy[i])
+            {
+                WhenBuyChapter(i);
+            }
+        }
+
         SetScreen(currChapter);
+
     }
 
     public void HomeScreen()
@@ -110,12 +125,13 @@ public class ScreenSystem : MonoBehaviour {
                 itemButton[i].SetActive(false);
         }
 
-
+       
         // 버튼 활성화 설정
         moveButton[(int)Dir.East].SetActive(currScreen.dir[(int)Dir.East]);
         moveButton[(int)Dir.West].SetActive(currScreen.dir[(int)Dir.West]);
         moveButton[(int)Dir.North].SetActive(currScreen.dir[(int)Dir.North]);
         moveButton[(int)Dir.South].SetActive(currScreen.dir[(int)Dir.South]);
+       
     }
 
     // 이동 함수
@@ -211,6 +227,7 @@ public class ScreenSystem : MonoBehaviour {
         int index = itemIndex % 9;
         itemButton[index].SetActive(true);
     }
+
     // 문열기
     void OpenGate(int dir, ScreenInfo currScreen, ScreenInfo nextScreen)
     {
