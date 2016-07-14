@@ -15,8 +15,6 @@ public class ObjectInfo
 {
     public string strName = "new item";
     public string strScenario = "new Scenario";
-    public bool isBuy = false;
-    public bool isLock = true;
     public bool isDiaLock = false;
     public int priceCoin = 100;
     public int priceDia = 100;

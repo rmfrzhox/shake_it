@@ -6,7 +6,6 @@ public class GameDataManager : MonoBehaviour {
     // 기본 게임 정보
     // int iCurrentCoin = 60000000;
     // int iCurrentDia = 60000000;
-
     // 게임 시작 정보
     public bool onShakeIt = false;
 
@@ -107,23 +106,27 @@ public class GameDataManager : MonoBehaviour {
         {
             screenSystem = gameObject.GetComponent<ScreenSystem>();
         }
-        
+
     }
 
     // Use this for initialization
     void Start()
     {
         saveAndLoad.LoadDB();
+
         SetData();
     }
 
-	
+	public void Btn_Init()
+    {
+        DataInit();
+        SetData();
+    }
 	// Update is called once per frame
 	void Update () {
         if (Input.GetButtonUp("Fire1"))
         {
-            DataInit();
-            SetData();
+            Btn_Init();            
             print("데이터 초기화");
         }
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -188,13 +191,13 @@ public class GameDataManager : MonoBehaviour {
             else if (i == itemObj.Length) return;
         }
 
-        if (itemData.itemProperty[currentIndex].isLock == true) return;
+        if (userData.itemLock[currentIndex] == true) return;
 
         // 찾은 아이템 창에 셋팅
         itemStore.SetActive(true);
         itemBuyImage.sprite = itemData.itemProperty[currentIndex].imageItem;
 
-        if (itemData.itemProperty[currentIndex].isBuy)
+        if (userData.itemIsBuy[currentIndex])
             itemBuyPrice.text = "구매 완료";
         else if (itemData.itemProperty[currentIndex].isDiaLock)
             itemBuyPrice.text = string.Format("{0:##,###,###,###}", itemData.itemProperty[currentIndex].priceCoin) + " C";
@@ -223,12 +226,12 @@ public class GameDataManager : MonoBehaviour {
             else if (i == stageObj.Length) return;
         }
 
-        if (itemData.stageProperty[currentIndex].isLock == true) return;
+        if (userData.stageLock[currentIndex] == true) return;
 
         // 찾은 아이템 창에 셋팅
         stageStore.SetActive(true);
 
-        if (itemData.stageProperty[currentIndex].isBuy) 
+        if (userData.stageIsBuy[currentIndex]) 
             stageBuyPrice.text = "구매 완료";
         else if (itemData.stageProperty[currentIndex].isDiaLock) 
             stageBuyPrice.text = itemData.stageProperty[currentIndex].priceCoin.ToString() + " C\n";
@@ -257,7 +260,7 @@ public class GameDataManager : MonoBehaviour {
              else if (i == chapObj.Length) return;
         }
 
-        if (itemData.chapProperty[currentIndex].isLock == true) return;
+        if (userData.chapLock[currentIndex] == true) return;
         
         // 찾은 아이템 창에 셋팅
         chapStore.SetActive(true);
@@ -265,7 +268,7 @@ public class GameDataManager : MonoBehaviour {
         chapBuyTitle.text = itemData.chapProperty[currentIndex].strName;
         chapBuyScenario.text = itemData.chapProperty[currentIndex].strScenario ;
 
-        if (itemData.chapProperty[currentIndex].isBuy) chapBuyPrice.text = "구매 완료";
+        if (userData.chapIsBuy[currentIndex]) chapBuyPrice.text = "구매 완료";
         else chapBuyPrice.text = itemData.chapProperty[currentIndex].priceCoin.ToString() + " C\n" + itemData.chapProperty[currentIndex].priceDia.ToString() + " D\n";
 
         // 상품 등록
@@ -281,14 +284,14 @@ public class GameDataManager : MonoBehaviour {
             if (itemData.itemProperty[itemIndex].isDiaLock) return;
 
             // 구매 한 것 이면 리턴
-            if (itemData.itemProperty[itemIndex].isBuy) return;
+            if (userData.itemIsBuy[itemIndex]) return;
 
             //현재 다이아가 부족하면 리턴
             if (userData.currentDia < itemData.itemProperty[itemIndex].priceDia) return;
 
             userData.currentDia -= itemData.itemProperty[itemIndex].priceDia;
             
-            itemData.itemProperty[itemIndex].isBuy = true;
+            userData.itemIsBuy[itemIndex] = true;
             itemBuyPrice.text = "구매 완료";
 
             unlockSystem.WhenBuyItem(itemIndex);
@@ -297,13 +300,13 @@ public class GameDataManager : MonoBehaviour {
         else if (buyLocation == stageStore) // 스테이지 구매 창인가?
         {
             // 구매 한 것 이면 리턴
-            if (itemData.stageProperty[stageIndex].isBuy) return;
+            if (userData.stageIsBuy[stageIndex]) return;
 
             //현재 다이아가 부족하면 리턴
             if (userData.currentDia < itemData.stageProperty[stageIndex].priceDia) return;
 
             userData.currentDia -= itemData.stageProperty[stageIndex].priceDia;
-            itemData.stageProperty[stageIndex].isBuy = true;
+            userData.stageIsBuy[stageIndex] = true;
             stageBuyPrice.text = "구매 완료";
 
             unlockSystem.WhenBuyStage(stageIndex);
@@ -312,13 +315,13 @@ public class GameDataManager : MonoBehaviour {
         {
 
             // 구매 한 것 이면 리턴
-            if (itemData.chapProperty[chapIndex].isBuy) return;
+            if (userData.chapIsBuy[chapIndex]) return;
 
             //현재 다이아가 부족하면 리턴
             if (userData.currentDia < itemData.chapProperty[chapIndex].priceDia) return;
 
             userData.currentDia -= itemData.chapProperty[chapIndex].priceDia;
-            itemData.chapProperty[chapIndex].isBuy = true;
+            userData.chapIsBuy[chapIndex] = true;
             chapBuyPrice.text = "구매 완료";
 
             unlockSystem.WhenBuyChapter(chapIndex);
@@ -333,13 +336,13 @@ public class GameDataManager : MonoBehaviour {
         if (buyLocation == itemStore) // 아이템 구매 창인가?
         {
             // 구매 한 것 이면 리턴
-            if (itemData.itemProperty[itemIndex].isBuy) return;
+            if (userData.itemIsBuy[itemIndex]) return;
 
             //현재 코인이 부족하면 리턴
             if (userData.currentCoin < itemData.itemProperty[itemIndex].priceCoin) return;
 
             userData.currentCoin -= itemData.itemProperty[itemIndex].priceCoin;
-            itemData.itemProperty[itemIndex].isBuy = true;
+            userData.itemIsBuy[itemIndex] = true;
             itemBuyPrice.text = "구매 완료";
 
             unlockSystem.WhenBuyItem(itemIndex);
@@ -349,13 +352,13 @@ public class GameDataManager : MonoBehaviour {
         else if (buyLocation == stageStore) // 스테이지 구매 창인가?
         {
             // 구매 한 것 이면 리턴
-            if (itemData.stageProperty[stageIndex].isBuy) return;
+            if (userData.stageIsBuy[stageIndex]) return;
 
             //현재 코인이 부족하면 리턴
             if (userData.currentCoin < itemData.stageProperty[stageIndex].priceCoin) return;
 
             userData.currentCoin -= itemData.stageProperty[stageIndex].priceCoin;
-            itemData.stageProperty[stageIndex].isBuy = true;
+            userData.stageIsBuy[stageIndex] = true;
             stageBuyPrice.text = "구매 완료";
 
             unlockSystem.WhenBuyStage(stageIndex);
@@ -365,13 +368,13 @@ public class GameDataManager : MonoBehaviour {
         {
 
             // 구매 한 것 이면 리턴
-            if (itemData.chapProperty[chapIndex].isBuy) return;
+            if (userData.chapIsBuy[chapIndex]) return;
 
             //현재 코인이 부족하면 리턴
             if (userData.currentCoin < itemData.chapProperty[chapIndex].priceCoin) return;
 
             userData.currentCoin -= itemData.chapProperty[chapIndex].priceCoin;
-            itemData.chapProperty[chapIndex].isBuy = true;
+            userData.chapIsBuy[chapIndex] = true;
             chapBuyPrice.text = "구매 완료";
 
             unlockSystem.WhenBuyChapter(chapIndex);
@@ -383,8 +386,15 @@ public class GameDataManager : MonoBehaviour {
 
     public void UpdateText()
     {
-        coinText.text = string.Format("{0:##,###,###,###}", userData.currentCoin) + " C";
-        diaText.text = string.Format("{0:##,###,###,###}", userData.currentDia) + " D";
+        if (userData.currentCoin == 0)
+            coinText.text = "0 C";
+        else
+            coinText.text = string.Format("{0:##,###,###,###}", userData.currentCoin) + " C";
+
+        if (userData.currentDia == 0)
+            diaText.text = "0 D";
+        else
+            diaText.text = string.Format("{0:##,###,###,###}", userData.currentDia) + " D";
     }
     
 
@@ -397,25 +407,25 @@ public class GameDataManager : MonoBehaviour {
         // 아이템 초기화
         for (int i = 0; i < 81; i++)
         {
-            itemData.itemProperty[i].isBuy = false;
-            itemData.itemProperty[i].isLock = true;
+            userData.itemIsBuy[i] = false;
+            userData.itemLock[i] = true;
         }
-        itemData.itemProperty[0].isLock = false;
-        itemData.itemProperty[1].isLock = false;
-        itemData.itemProperty[2].isLock = false;
+        userData.itemLock[0] = false;
+        userData.itemLock[1] = false;
+        userData.itemLock[2] = false;
 
         // 스테이지 초기화
         for (int i = 0; i < 27; i++)
         {
-            itemData.stageProperty[i].isBuy = false;
-            itemData.stageProperty[i].isLock = true;
+            userData.stageIsBuy[i] = false;
+            userData.stageLock[i] = true;
         }
 
         // 챕터초기화
         for (int i = 0; i < 9; i++)
         {
-            itemData.chapProperty[i].isBuy = false;
-            itemData.chapProperty[i].isLock = true;
+            userData.chapIsBuy[i] = false;
+            userData.chapLock[i] = true;
         }
 
         for (int i = 0; i < 9; i++)
@@ -437,7 +447,7 @@ public class GameDataManager : MonoBehaviour {
         for (int i = 0; i < itemObj.Length; i++)
         {
 
-            if (itemData.itemProperty[i].isLock == true)
+            if (userData.itemLock[i] == true)
             {
                 itemObj[i].GetComponent<Image>().sprite = lockSprite;
                 itemObj[i].transform.FindChild("Item_Image").GetComponent<Image>().enabled = false;
@@ -454,7 +464,7 @@ public class GameDataManager : MonoBehaviour {
         // 챕터 데이터 입력
         for (int i = 0; i < chapObj.Length; i++)
         {
-            if (itemData.chapProperty[i].isLock == true)
+            if (userData.chapLock[i] == true)
             {
                 chapObj[i].transform.FindChild("Chapter_Btn").transform.FindChild("Chapter_Text").GetComponent<Text>().text = "? ? ?";
             }
@@ -466,15 +476,16 @@ public class GameDataManager : MonoBehaviour {
             }
         }
 
+        /*
         for (int i = 0; i < chapObj.Length; i++)
         {
-            if (itemData.chapProperty[i].isBuy == true)
+            if (userData.chapIsBuy[i] == true)
             {
                 screenSystem.WhenBuyChapter(i);
             }
             
         }
-
+        */
         // 챕터에서 스테이지 배열 만들기
         for (int i = 0; i < chapObj.Length; i++)
         {
@@ -486,7 +497,7 @@ public class GameDataManager : MonoBehaviour {
         // 스테이지 데이터 입력
         for (int i = 0; i < stageObj.Length; i++)
         {
-            if (itemData.stageProperty[i].isLock == false)
+            if (userData.stageLock[i] == false)
             {
                 stageObj[i].GetComponent<Image>().sprite = unlockSprite;
                 stageObj[i].transform.FindChild("Text").GetComponent<Text>().enabled = true;
@@ -504,6 +515,8 @@ public class GameDataManager : MonoBehaviour {
     public void CoinSave(int _val)
     {
         GameDataManager.Instance.userData.currentCoin += _val;
+
+        UpdateText();
     }
     public int CoinPerHit(int index)
     {

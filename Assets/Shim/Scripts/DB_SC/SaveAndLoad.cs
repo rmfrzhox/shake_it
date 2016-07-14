@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SaveAndLoad : MonoBehaviour {
+public class SaveAndLoad : MonoBehaviour
+{
 
     string strItemBuy = "itemBuy";
     string strItemLock = "itemLock";
@@ -27,13 +28,13 @@ public class SaveAndLoad : MonoBehaviour {
         {
             if (i < GameDataManager.Instance.itemData.itemProperty.Length - 1)
             {
-                itemBuy += GameDataManager.Instance.itemData.itemProperty[i].isBuy.ToString() + ",";
-                itemLock += GameDataManager.Instance.itemData.itemProperty[i].isLock.ToString() + ",";
+                itemBuy += GameDataManager.Instance.userData.itemIsBuy[i].ToString() + ",";
+                itemLock += GameDataManager.Instance.userData.itemLock[i].ToString() + ",";
             }
             else
             {
-                itemBuy += GameDataManager.Instance.itemData.itemProperty[i].isBuy.ToString();
-                itemLock += GameDataManager.Instance.itemData.itemProperty[i].isLock.ToString();
+                itemBuy += GameDataManager.Instance.userData.itemIsBuy[i].ToString();
+                itemLock += GameDataManager.Instance.userData.itemLock[i].ToString();
             }
         }
         PlayerPrefs.SetString(strItemBuy, itemBuy);
@@ -48,13 +49,13 @@ public class SaveAndLoad : MonoBehaviour {
         {
             if (i < GameDataManager.Instance.itemData.stageProperty.Length - 1)
             {
-                itemBuy += GameDataManager.Instance.itemData.stageProperty[i].isBuy.ToString() + ",";
-                itemLock += GameDataManager.Instance.itemData.stageProperty[i].isLock.ToString() + ",";
+                itemBuy += GameDataManager.Instance.userData.stageIsBuy[i].ToString() + ",";
+                itemLock += GameDataManager.Instance.userData.stageLock[i].ToString() + ",";
             }
             else
             {
-                itemBuy += GameDataManager.Instance.itemData.stageProperty[i].isBuy.ToString();
-                itemLock += GameDataManager.Instance.itemData.stageProperty[i].isLock.ToString();
+                itemBuy += GameDataManager.Instance.userData.stageIsBuy[i].ToString();
+                itemLock += GameDataManager.Instance.userData.stageLock[i].ToString();
             }
         }
         PlayerPrefs.SetString(strStageBuy, itemBuy);
@@ -69,13 +70,13 @@ public class SaveAndLoad : MonoBehaviour {
         {
             if (i < GameDataManager.Instance.itemData.chapProperty.Length - 1)
             {
-                itemBuy += GameDataManager.Instance.itemData.chapProperty[i].isBuy.ToString() + ",";
-                itemLock += GameDataManager.Instance.itemData.chapProperty[i].isLock.ToString() + ",";
+                itemBuy += GameDataManager.Instance.userData.chapIsBuy[i].ToString() + ",";
+                itemLock += GameDataManager.Instance.userData.chapLock[i].ToString() + ",";
             }
             else
             {
-                itemBuy += GameDataManager.Instance.itemData.chapProperty[i].isBuy.ToString();
-                itemLock += GameDataManager.Instance.itemData.chapProperty[i].isLock.ToString();
+                itemBuy += GameDataManager.Instance.userData.chapIsBuy[i].ToString();
+                itemLock += GameDataManager.Instance.userData.chapLock[i].ToString();
             }
         }
         PlayerPrefs.SetString(strChapBuy, itemBuy);
@@ -83,11 +84,13 @@ public class SaveAndLoad : MonoBehaviour {
 
 
         // 유저 정보
-        int coin = GameDataManager.Instance.userData.currentCoin;
-        int dia = GameDataManager.Instance.userData.currentDia;
+        int coin = 0;
+        coin = GameDataManager.Instance.userData.currentCoin;
+        int dia = 0;
+        dia = GameDataManager.Instance.userData.currentDia;
 
-        PlayerPrefs.SetInt(strCoin, coin);
-        PlayerPrefs.SetInt(strDia, dia);
+        PlayerPrefs.SetInt(strCoin, (int)coin);
+        PlayerPrefs.SetInt(strDia, (int)dia);
 
         string hitPoint = "";
         for (int i = 0; i < GameDataManager.Instance.userData.hitPoint.Length; i++)
@@ -100,6 +103,8 @@ public class SaveAndLoad : MonoBehaviour {
 
 
     }
+
+
     public void LoadDB()
     {
         // 아이템 로드
@@ -111,12 +116,16 @@ public class SaveAndLoad : MonoBehaviour {
             itemBuy = PlayerPrefs.GetString(strItemBuy).Split(',');
             itemLock = PlayerPrefs.GetString(strItemLock).Split(',');
 
+            print("Item IsBuy : " + PlayerPrefs.GetString(strItemBuy) + " \n\n");
+            print("Item Lock : " + PlayerPrefs.GetString(strItemLock) + " \n\n");
+
             for (int i = 0; i < GameDataManager.Instance.itemData.itemProperty.Length; i++)
             {
-                GameDataManager.Instance.itemData.itemProperty[i].isBuy = System.Convert.ToBoolean(itemBuy[i]);
-                GameDataManager.Instance.itemData.itemProperty[i].isLock = System.Convert.ToBoolean(itemLock[i]);
+                GameDataManager.Instance.userData.itemIsBuy[i] = System.Convert.ToBoolean(itemBuy[i]);
+                GameDataManager.Instance.userData.itemLock[i] = System.Convert.ToBoolean(itemLock[i]);
             }
         }
+
 
         // 스테이지 로드
         if (PlayerPrefs.GetString(strStageBuy) != "")
@@ -127,10 +136,13 @@ public class SaveAndLoad : MonoBehaviour {
             stageBuy = PlayerPrefs.GetString(strStageBuy).Split(',');
             stageLock = PlayerPrefs.GetString(strStageLock).Split(',');
 
+            print("Stage IsBuy : " + PlayerPrefs.GetString(strStageBuy) + " \n\n");
+            print("Stage Lock : " + PlayerPrefs.GetString(strStageLock) + " \n\n");
+
             for (int i = 0; i < GameDataManager.Instance.itemData.stageProperty.Length; i++)
             {
-                GameDataManager.Instance.itemData.stageProperty[i].isBuy = System.Convert.ToBoolean(stageBuy[i]);
-                GameDataManager.Instance.itemData.stageProperty[i].isLock = System.Convert.ToBoolean(stageLock[i]);
+                GameDataManager.Instance.userData.stageIsBuy[i] = System.Convert.ToBoolean(stageBuy[i]);
+                GameDataManager.Instance.userData.stageLock[i] = System.Convert.ToBoolean(stageLock[i]);
             }
         }
 
@@ -145,8 +157,8 @@ public class SaveAndLoad : MonoBehaviour {
 
             for (int i = 0; i < GameDataManager.Instance.itemData.chapProperty.Length; i++)
             {
-                GameDataManager.Instance.itemData.chapProperty[i].isBuy = System.Convert.ToBoolean(chapBuy[i]);
-                GameDataManager.Instance.itemData.chapProperty[i].isLock = System.Convert.ToBoolean(chapLock[i]);
+                GameDataManager.Instance.userData.chapIsBuy[i] = System.Convert.ToBoolean(chapBuy[i]);
+                GameDataManager.Instance.userData.chapLock[i] = System.Convert.ToBoolean(chapLock[i]);
             }
         }
 
@@ -156,19 +168,21 @@ public class SaveAndLoad : MonoBehaviour {
         GameDataManager.Instance.userData.currentCoin = PlayerPrefs.GetInt(strCoin);
         GameDataManager.Instance.userData.currentDia = PlayerPrefs.GetInt(strDia);
 
-        
+        print(PlayerPrefs.GetInt(strCoin));
+        print(PlayerPrefs.GetInt(strDia));
+
+
         if (PlayerPrefs.GetString(strHitPoint) != "")
         {
             string[] hitPoint;
 
-            hitPoint = PlayerPrefs.GetString(strHitPoint).Split(',');        
+            hitPoint = PlayerPrefs.GetString(strHitPoint).Split(',');
 
             for (int i = 0; i < GameDataManager.Instance.userData.hitPoint.Length; i++)
             {
                 GameDataManager.Instance.userData.hitPoint[i] = System.Convert.ToInt32(hitPoint[i]);
             }
         }
-
 
     }
 }
